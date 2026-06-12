@@ -1,0 +1,12 @@
+pandas
+tqdm
+numpy
+scipy
+rdkit
+torch
+transformers
+huggingface_hub
+rxnmapper
+lmdb
+networkx
+
