@@ -1,0 +1,10 @@
+metric	value
+groups_used	2
+group_size	10
+top_n	5
+hit_fill_sim	0.0
+hit_filled_groups	0
+all_mean_avg_over_groups	0.4642679373
+all_min_avg_over_groups	0.3228385807
+hit_mean_avg_over_groups	0.5146364276
+hit_min_avg_over_groups	0.3391563147

@@ -1,0 +1,12 @@
+total_products: 2
+products_with_pairs(m>=2): 2
+GLOBAL_AVG_sim_per_product_include_all(m<=1 as 0): 0.15000000
+GLOBAL_AVG_sim_per_product_only_pairs(m>=2): 0.15000000
+GLOBAL_AVG_sim_weighted_by_pairs: 0.15000000
+global_total_pairs: 20
+device_for_mapper: cpu
+CUDA_VISIBLE_DEVICES: 
+skipped_map_count: 0
+group_mode: block
+group_size: 10
+top_k: 5

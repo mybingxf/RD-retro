@@ -1,0 +1,15 @@
+numpy==2.2.6
+pandas==2.3.3
+rdkit==2025.9.3
+requests==2.31.0
+rxn-chem-utils==1.6.0
+rxn-utils==2.0.0
+rxnmapper==0.4.2
+scipy==1.15.3
+setuptools==80.10.2
+six==1.16.0
+tokenizers==0.22.1
+torch==2.8.0
+torchtext==0.3.1
+tqdm==4.67.1
+transformers==4.57.3

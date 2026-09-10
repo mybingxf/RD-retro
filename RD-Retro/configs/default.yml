@@ -1,0 +1,57 @@
+# Publication defaults. Supply input.path or pass --input on the command line.
+input:
+  path: null
+  format: auto
+  product_column: product
+  reactants_column: reactants
+  reagent_column: null
+  group_column: group_id
+  rank_column: rank
+  source_column: source_type
+  default_source_type: generated
+  candidate_prefix: reactants
+  candidate_columns: null
+  source_by_candidate_column: {}
+
+output_dir: ../reaction_filter_output
+
+forward:
+  backend: reactiont5v2
+  model_name_or_path: sagawa/ReactionT5v2-forward
+  revision: 933114058cb2604dc1bf536dbebdfcefbe83d4fc
+  devices: [auto]
+  batch_size: 16
+  input_max_length: 150
+  max_new_tokens: 128
+  num_beams: 1
+  dtype: auto
+  prompt_template: "REACTANT:{reactants}REAGENT:{reagent}"
+  local_files_only: false
+  prediction_file: null
+  prediction_id_column: candidate_id
+  prediction_column: predicted_product
+  chemformer_root: null
+  chemformer_checkpoint: null
+  chemformer_vocabulary: null
+  chemformer_max_length: 512
+
+mapping:
+  backend: rxnmapper
+  devices: [auto]
+  batch_size: 64
+  canonicalize: false
+  prediction_file: null
+
+confidence_threshold: 0.2
+
+diversity:
+  max_candidates_per_product: 10
+  morgan_radius: 2
+  morgan_bits: 2048
+  workers: 8
+  chunksize: 8
+  invalid_smiles: error
+  # Backward-compatible implementation used by the original code/results.
+  # Use source_then_mean_similarity to follow Methods 4.4, Eqs. (8)-(10).
+  removal_strategy: confidence
+  original_source_types: [training, original]

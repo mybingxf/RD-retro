@@ -1,0 +1,24 @@
+# Methods 4.4 (Eqs. 8-10) diversity rule. This file is a configuration
+# template: edit input.path/output_dir and the model/device settings as needed.
+input:
+  path: null
+  format: long
+  product_column: product
+  reactants_column: reactants
+  reagent_column: reagent
+  group_column: group_id
+  rank_column: rank
+  source_column: source_type
+  default_source_type: generated
+
+output_dir: ../reaction_filter_output_manuscript_method
+
+diversity:
+  max_candidates_per_product: 10
+  morgan_radius: 2
+  morgan_bits: 2048
+  workers: 8
+  chunksize: 8
+  invalid_smiles: error
+  removal_strategy: source_then_mean_similarity
+  original_source_types: [training, original]

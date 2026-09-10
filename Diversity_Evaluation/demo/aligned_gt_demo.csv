@@ -1,0 +1,3 @@
+id,reactants>reagents>production
+0,CC(=O)c1ccc2[nH]ccc2c1.CC(C)(C)OC(=O)OC(=O)OC(C)(C)C>>CC(=O)c1ccc2c(ccn2C(=O)OC(C)(C)C)c1
+1,NCc1ccccc1S(=O)(=O)C1CC1.O=C(OC(=O)C(F)(F)F)C(F)(F)F>>O=C(NCc1ccccc1S(=O)(=O)C1CC1)C(F)(F)F

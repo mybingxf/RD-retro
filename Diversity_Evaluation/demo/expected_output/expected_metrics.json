@@ -1,0 +1,10 @@
+{
+  "combined_top1_accuracy": 0.5,
+  "combined_top5_accuracy": 1.0,
+  "combined_top10_accuracy": 1.0,
+  "exact_top1_accuracy": 0.0,
+  "exact_top10_accuracy": 1.0,
+  "reactant_all_mean": 0.4642679373,
+  "reactant_all_min": 0.3228385807,
+  "reactant_hit_mean": 0.5146364276
+}

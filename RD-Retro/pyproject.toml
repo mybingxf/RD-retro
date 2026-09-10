@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reaction-filter-pipeline"
+version = "1.1.0"
+description = "Forward-model, RXNMapper-confidence, and molecular-diversity filtering of retrosynthesis candidates"
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+license = {file = "LICENSE"}
+authors = [{name = "The authors"}]
+dependencies = [
+  "numpy>=1.23,<2",
+  "PyYAML>=6,<7",
+  "tqdm>=4.64,<5",
+  "rdkit-pypi>=2022.9.5",
+]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.0,<3",
+  "transformers>=4.40,<5",
+  "tokenizers>=0.19,<0.20",
+  "sentencepiece>=0.1.99",
+  "rxnmapper==0.4.3",
+]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+reaction-filter = "reaction_filter_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

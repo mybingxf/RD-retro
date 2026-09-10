@@ -1,0 +1,11 @@
+{
+  "input_product_groups": 3,
+  "input_candidates": 18,
+  "forward_matches": 15,
+  "below_confidence_threshold": 3,
+  "confidence_filtered_candidates": 12,
+  "diversity_removed_candidates": 3,
+  "final_candidates": 9,
+  "final_candidates_per_product": 3
+}
+

@@ -1,0 +1,33 @@
+# Deterministic offline demonstration of Methods 4.4, Eqs. (8)-(10).
+input:
+  path: ../examples/demo_candidates.csv
+  format: long
+  product_column: product
+  reactants_column: reactants
+  reagent_column: reagent
+  group_column: group_id
+  rank_column: rank
+  source_column: source_type
+  default_source_type: generated
+
+output_dir: ../demo_output_manuscript_method
+
+forward:
+  backend: precomputed
+  prediction_file: ../examples/demo_forward_predictions.csv
+
+mapping:
+  backend: precomputed
+  prediction_file: ../examples/demo_mapping_predictions.csv
+
+confidence_threshold: 0.2
+
+diversity:
+  max_candidates_per_product: 3
+  morgan_radius: 2
+  morgan_bits: 2048
+  workers: 2
+  chunksize: 1
+  invalid_smiles: error
+  removal_strategy: source_then_mean_similarity
+  original_source_types: [training, original]

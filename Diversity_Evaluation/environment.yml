@@ -1,0 +1,8 @@
+name: roundtripcal
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - pip
+  - pip:
+      - -r requirements.txt

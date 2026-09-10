@@ -1,0 +1,42 @@
+input:
+  path: ../examples/demo_reactiont5v2.csv
+  format: long
+  product_column: product
+  reactants_column: reactants
+  reagent_column: reagent
+  group_column: group_id
+  rank_column: rank
+  source_column: source_type
+  default_source_type: generated
+
+output_dir: ../demo_output_reactiont5v2
+
+forward:
+  backend: reactiont5v2
+  model_name_or_path: sagawa/ReactionT5v2-forward
+  revision: 933114058cb2604dc1bf536dbebdfcefbe83d4fc
+  devices: [auto]
+  batch_size: 1
+  input_max_length: 150
+  max_new_tokens: 128
+  num_beams: 1
+  dtype: auto
+  prompt_template: "REACTANT:{reactants}REAGENT:{reagent}"
+
+mapping:
+  backend: rxnmapper
+  devices: [auto]
+  batch_size: 1
+  canonicalize: false
+
+confidence_threshold: 0.2
+
+diversity:
+  max_candidates_per_product: 10
+  morgan_radius: 2
+  morgan_bits: 2048
+  workers: 1
+  chunksize: 1
+  invalid_smiles: error
+  removal_strategy: confidence
+  original_source_types: [training, original]

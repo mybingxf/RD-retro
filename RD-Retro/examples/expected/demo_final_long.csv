@@ -1,0 +1,10 @@
+candidate_id,group_id,rank,product,reactants,reagent,source_type,predicted_product,mapped_reaction_smiles,mapping_confidence,mapping_success
+1,ester,2,CCOC(C)=O,CCO.CC(=O)Cl,,generated,CCOC(C)=O,[CH3:1][CH2:2][OH:3].[CH3:5][C:4](=[O:6])Cl>>[CH3:1][CH2:2][O:3][C:4]([CH3:5])=[O:6],0.9891900030044444,1
+2,ester,3,CCOC(C)=O,CCO.CC(=O)Br,,generated,CCOC(C)=O,[CH3:1][CH2:2][OH:3].[CH3:5][C:4](=[O:6])Br>>[CH3:1][CH2:2][O:3][C:4]([CH3:5])=[O:6],0.9900490558119467,1
+5,ester,6,CCOC(C)=O,CCOC(C)=O,,generated,CCOC(C)=O,[CH3:1][CH2:2][O:3][C:4]([CH3:5])=[O:6]>>[CH3:1][CH2:2][O:3][C:4]([CH3:5])=[O:6],0.9968985594692387,1
+7,amide,2,CCNC(C)=O,CCN.CC(=O)Cl,,generated,CCNC(C)=O,[CH3:1][CH2:2][NH2:3].[CH3:5][C:4](=[O:6])Cl>>[CH3:1][CH2:2][NH:3][C:4]([CH3:5])=[O:6],0.9998161403072131,1
+8,amide,3,CCNC(C)=O,CCN.CC(=O)Br,,generated,CCNC(C)=O,[CH3:1][CH2:2][NH2:3].[CH3:5][C:4](=[O:6])Br>>[CH3:1][CH2:2][NH:3][C:4]([CH3:5])=[O:6],0.99973360453396,1
+11,amide,6,CCNC(C)=O,CCNC(C)=O,,generated,CCNC(C)=O,[CH3:1][CH2:2][NH:3][C:4]([CH3:5])=[O:6]>>[CH3:1][CH2:2][NH:3][C:4]([CH3:5])=[O:6],0.9998098490975507,1
+12,ether,1,CCOCC,CCO.CCBr,,training,CCOCC,[CH3:5][CH2:4][OH:3].[CH3:1][CH2:2]Br>>[CH3:1][CH2:2][O:3][CH2:4][CH3:5],0.9762067785308619,1
+14,ether,3,CCOCC,CCO.CCI,,generated,CCOCC,[CH3:1][CH2:2][OH:3].[CH3:5][CH2:4]I>>[CH3:1][CH2:2][O:3][CH2:4][CH3:5],0.9770861481645723,1
+16,ether,5,CCOCC,CCOCC,,generated,CCOCC,[CH3:1][CH2:2][O:3][CH2:4][CH3:5]>>[CH3:1][CH2:2][O:3][CH2:4][CH3:5],0.8252777602841418,1
