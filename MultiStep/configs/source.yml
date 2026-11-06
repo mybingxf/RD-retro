@@ -1,0 +1,38 @@
+properties:
+  C: 1.4
+  cutoff_cumulative: 10
+  cutoff_number: 10
+  max_transforms: 7
+  default_prior: 0.5
+  use_prior: true
+  return_first: false
+  iteration_limit: 200
+  time_limit: 28800
+  exclude_target_from_stock: true
+  prune_cycles_in_search: true
+  additive_expansion: false
+  search_algorithm: aizynthfinder.search.retrostar.search_tree.SearchTree
+  post_processing:
+    min_routes: 5
+    max_routes: 25
+    all_routes: true
+    route_distance_model: null
+
+stock:
+  files:
+    buyables: /path/to/zinc_stock.hdf5
+
+policy:
+  smiles-based:
+    chemformer_orig:
+      use_gpu: false
+      module_path: /path/to/Chemformer
+      model_path: /path/to/source_checkpoint.ckpt
+      vocab_path: /path/to/Chemformer/bart_vocab_downstream.json
+      batch_size: 8
+      num_workers: 0
+      num_beams: 10
+      data_device: cuda:0
+      task: backward_prediction
+      train_mode: eval
+      model_type: bart

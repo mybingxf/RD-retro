@@ -1,0 +1,8 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+runs/
+outputs/
+*.jsonl
+*_route_artifacts/
+*_live_progress/
